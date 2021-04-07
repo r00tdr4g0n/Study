@@ -36,5 +36,9 @@ public:
 
 	int compare(const MyString& str) const;
 
+	bool operator==(MyString& str);
+
+	char& operator[](const int index);
+
 	~MyString();
 };

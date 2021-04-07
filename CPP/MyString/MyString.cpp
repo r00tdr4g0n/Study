@@ -217,6 +217,16 @@ int MyString::compare(const MyString& str) const
 	}
 }
 
+bool MyString::operator==(MyString& str)
+{
+	return !compare(str);
+}
+
+char& MyString::operator[](const int index)
+{
+	return string_content[index];
+}
+
 MyString::~MyString()
 {
 	if (string_content) delete[] string_content;
